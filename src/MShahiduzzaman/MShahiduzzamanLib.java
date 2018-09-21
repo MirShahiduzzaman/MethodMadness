@@ -120,7 +120,7 @@ public class MShahiduzzamanLib
 
                 if (n < num1)
                 {
-                    result += ",";
+                    result += ", ";
                 }
             }
             println(result);
