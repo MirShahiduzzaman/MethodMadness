@@ -18,7 +18,7 @@ public class TestFile
         System.out.println(sumUpTo(2));
 
         primePrinter(21);
-        fooBarBaz(32);
+        fooBarBaz(54);
 
     }
 }
