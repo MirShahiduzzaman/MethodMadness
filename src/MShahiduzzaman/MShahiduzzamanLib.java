@@ -1,4 +1,5 @@
 package MShahiduzzaman;
+/**Mir Shahiduzzaman 9/21/2018*/
 
 public class MShahiduzzamanLib
 {
@@ -83,8 +84,15 @@ public class MShahiduzzamanLib
         }
     }
 
+    /**
+     * @method fooBarBaz returns
+     * @param num1 number representing the maximum number in the list
+     * @return void
+     * @prints numbers from 1 to num1. It replaces the multiples of
+     */
     public static void fooBarBaz(int num1)
     {
+
         if(num1<=0)
         {
             println("");
