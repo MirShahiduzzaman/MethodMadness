@@ -9,7 +9,7 @@ public class MShahiduzzamanLib
     }
 
     /**
-     * 
+     *
      * @param word the word the user wants to check
      * @return true if word is a palindrome and false if it isn't
      */
@@ -34,8 +34,8 @@ public class MShahiduzzamanLib
 
     /**
      *
-     * @param date
-     * @return
+     * @param date user input of date with or without slashes
+     * @return String of date with no slashes
      */
     public static String dateStr(String date)
     {
@@ -52,8 +52,8 @@ public class MShahiduzzamanLib
 
     /**
      *
-     * @param num
-     * @return
+     * @param num number to sum up to
+     * @return sum of numbers from 1 to num
      */
     public static int sumUpTo(int num)
     {
@@ -67,7 +67,9 @@ public class MShahiduzzamanLib
 
     /**
      *
-     * @param num
+     * @param num number of prime numbers you want to print
+     * @return void
+     * @print num number of prime numbers
      */
     public static void primePrinter(int num)
     {
@@ -107,7 +109,7 @@ public class MShahiduzzamanLib
      * @method fooBarBaz returns
      * @param num1 number representing the maximum number in the list
      * @return void
-     * @print numbers from 1 to num1. It replaces the multiples of
+     * @print numbers from 1 to num1, replacing multiples of 3 with foo, multiples of 5 with bar, and multiples of both 3 and 5 with baz
      */
     public static void fooBarBaz(int num1)
     {
@@ -156,10 +158,10 @@ public class MShahiduzzamanLib
 
     /**
      *
-     * @param a
-     * @param b
-     * @param c
-     * @return
+     * @param a represents "a" in the quadratic equation
+     * @param b represents "b" in the quadratic equation
+     * @param c represents "c" in the quadratic equation
+     * @return String with roots, given the values. If there are no roots or any imaginary roots, it will return an explanation for this.
      */
     public static String quadSolver(double a,double b,double c)
     {
