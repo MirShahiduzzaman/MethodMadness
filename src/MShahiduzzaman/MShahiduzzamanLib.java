@@ -9,7 +9,7 @@ public class MShahiduzzamanLib
     }
 
     /**
-     *
+     * A method that checks whether a word is a palindrome
      * @param word the word the user wants to check
      * @return true if word is a palindrome and false if it isn't
      */
@@ -33,9 +33,9 @@ public class MShahiduzzamanLib
     }
 
     /**
-     *
-     * @param date user input of date with or without slashes
-     * @return String of date with no slashes
+     * A method that takes a string date with slashes in it and changes the slashes to dashes
+     * @param date user input of date with slashes
+     * @return String of date with the slashes replaced with dashes
      */
     public static String dateStr(String date)
     {
@@ -51,7 +51,7 @@ public class MShahiduzzamanLib
     }
 
     /**
-     *
+     * A method that returns the sum of numbers from 1 to the input(num)
      * @param num number to sum up to
      * @return sum of numbers from 1 to num
      */
@@ -66,7 +66,7 @@ public class MShahiduzzamanLib
     }
 
     /**
-     *
+     * A method that prints input num number of prime numbers
      * @param num number of prime numbers you want to print
      * @return void
      * @print num number of prime numbers
@@ -106,7 +106,7 @@ public class MShahiduzzamanLib
     }
 
     /**
-     * @method fooBarBaz returns
+     *  fooBarBaz returns
      * @param num1 number representing the maximum number in the list
      * @return void
      * @print numbers from 1 to num1, replacing multiples of 3 with foo, multiples of 5 with bar, and multiples of both 3 and 5 with baz
