@@ -8,6 +8,11 @@ public class MShahiduzzamanLib
         System.out.println(str);
     }
 
+    /**
+     * 
+     * @param word the word the user wants to check
+     * @return true if word is a palindrome and false if it isn't
+     */
     public static boolean isPalindrome(String word)
     {
         String check = "";
@@ -27,6 +32,11 @@ public class MShahiduzzamanLib
         }
     }
 
+    /**
+     *
+     * @param date
+     * @return
+     */
     public static String dateStr(String date)
     {
         int index = date.indexOf("/");
@@ -40,6 +50,11 @@ public class MShahiduzzamanLib
         return(date);
     }
 
+    /**
+     *
+     * @param num
+     * @return
+     */
     public static int sumUpTo(int num)
     {
         int total = 0;
@@ -50,6 +65,10 @@ public class MShahiduzzamanLib
         return(total);
     }
 
+    /**
+     *
+     * @param num
+     */
     public static void primePrinter(int num)
     {
         if(num <= 0)
@@ -88,7 +107,7 @@ public class MShahiduzzamanLib
      * @method fooBarBaz returns
      * @param num1 number representing the maximum number in the list
      * @return void
-     * @prints numbers from 1 to num1. It replaces the multiples of
+     * @print numbers from 1 to num1. It replaces the multiples of
      */
     public static void fooBarBaz(int num1)
     {
@@ -132,6 +151,43 @@ public class MShahiduzzamanLib
                 }
             }
             println(result);
+        }
+    }
+
+    /**
+     *
+     * @param a
+     * @param b
+     * @param c
+     * @return
+     */
+    public static String quadSolver(double a,double b,double c)
+    {
+        if(a == 0)
+        {
+            return("No roots because a is 0.");
+        }
+        else
+        {
+            double rad = (b *b) - (4*a*c);
+
+            if(rad<0)
+            {
+                return("The roots are imaginary because the discriminant is less than 0.");
+            }
+
+            double top1 = -b + (Math.sqrt(rad));
+            double top2 = -b - (Math.sqrt(rad));
+            double bot = 2*a;
+
+            if(rad == 0)
+            {
+                return("The only root is " + (top1/bot));
+            }
+            else
+            {
+                return ("The roots are " + (top1 / bot) + " and " + (top2 / bot));
+            }
         }
     }
 }
