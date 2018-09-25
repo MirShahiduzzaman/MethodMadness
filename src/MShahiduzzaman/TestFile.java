@@ -17,14 +17,20 @@ public class TestFile
         //Prints the string in the parameter
         println("I love a cup of Java in the morning");
 
+        println("");
+
         //This should return false because the input is not a palindrome
         System.out.println(isPalindrome("mommy"));
 
         //This should return true because the input is a palindrome
         System.out.println(isPalindrome("mom"));
 
+        println("");
+
         //Formats date to 03-08-2001
         System.out.println(dateStr("08/03/2001"));
+
+        println("");
 
         //takes the sum from 0 to 2
         System.out.println(sumUpTo(2));
@@ -35,6 +41,8 @@ public class TestFile
         //Prints 0 because num is less than 0
         System.out.println(sumUpTo(-1));
 
+        println("");
+
         //prints num number of prime numbers
         primePrinter(21);
         primePrinter(3);
@@ -44,6 +52,8 @@ public class TestFile
         primePrinter(0);
         primePrinter(-1);
 
+        println("");
+
         //prints a list of numbers from 0 to num1
         fooBarBaz(54);
         fooBarBaz(23);
@@ -52,6 +62,8 @@ public class TestFile
         //both print a line with an empty string
         fooBarBaz(0);
         fooBarBaz(-1);
+
+        println("");
 
         //prints one root
         println(quadSolver(4,4,1));
@@ -65,6 +77,8 @@ public class TestFile
 
         //prints an explanation of why this is not a quadratic equation
         println(quadSolver(0,3,1));
+
+        println("");
 
         //prints 0 because at least one parameter is 0
         System.out.println(leastCommonMultiple(0,44,88));
