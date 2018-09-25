@@ -3,14 +3,21 @@ package MShahiduzzaman;
 
 public class MShahiduzzamanLib
 {
+    /**
+     * prints the string parameter to the system
+     *
+     * @param str String to be printed
+     */
     public static void println(String str)
     {
         System.out.println(str);
     }
 
     /**
-     * A method that checks whether a word is a palindrome
+     * Checks whether a word is a palindrome
+     *
      * @param word the word the user wants to check
+     *
      * @return true if word is a palindrome and false if it isn't
      */
     public static boolean isPalindrome(String word)
@@ -33,9 +40,11 @@ public class MShahiduzzamanLib
     }
 
     /**
-     * A method that takes a string date with slashes in it and changes the slashes to dashes
+     * Takes String date in the format mm/dd/yyyy and changes the format to dd-mm-yyyy
+     *
      * @param date user input of date with slashes
-     * @return String of date with the slashes replaced with dashes
+     *
+     * @return String date in the format dd-mm-yyyy
      */
     public static String dateStr(String date)
     {
@@ -47,13 +56,15 @@ public class MShahiduzzamanLib
             index = date.indexOf("/");
         }
 
-        return(date);
+        return(date.substring(3,6) + date.substring(0,3) + date.substring(6));
     }
 
     /**
-     * A method that returns the sum of numbers from 1 to the input(num)
+     * returns the sum of numbers from 0 to num (the input)
+     *
      * @param num number to sum up to
-     * @return sum of numbers from 1 to num
+     *
+     * @return sum of numbers from 0 to num
      */
     public static int sumUpTo(int num)
     {
@@ -66,10 +77,9 @@ public class MShahiduzzamanLib
     }
 
     /**
-     * A method that prints input num number of prime numbers
-     * @param num number of prime numbers you want to print
-     * @return void
-     * @print num number of prime numbers
+     * prints the first num prime numbers, where num is the input
+     *
+     * @param num number of prime numbers the user wants to print
      */
     public static void primePrinter(int num)
     {
@@ -106,10 +116,10 @@ public class MShahiduzzamanLib
     }
 
     /**
-     *  fooBarBaz returns
-     * @param num1 number representing the maximum number in the list
-     * @return void
-     * @print numbers from 1 to num1, replacing multiples of 3 with foo, multiples of 5 with bar, and multiples of both 3 and 5 with baz
+     * prints a list of numbers from 1 to num1, replacing multiples of 3 with foo, multiples of 5 with bar, and
+     * multiples of both 3 and 5 with baz
+     *
+     * @param num1 represents the maximum number in the list
      */
     public static void fooBarBaz(int num1)
     {
@@ -121,8 +131,8 @@ public class MShahiduzzamanLib
         else
         {
             String result = "";
-            int n = 0; /**number of numbers atm*/
-            int currentNum = 1; /**Numbers to check*/
+            int n = 0; //number of numbers atm
+            int currentNum = 1; //Numbers to check
 
             while (n < num1)
             {
@@ -157,17 +167,21 @@ public class MShahiduzzamanLib
     }
 
     /**
+     * Finds the roots of a quadratic equation using the quadratic formula, given a, b, and c.
      *
      * @param a represents "a" in the quadratic equation
      * @param b represents "b" in the quadratic equation
      * @param c represents "c" in the quadratic equation
-     * @return String with roots, given the values. If there are no roots or any imaginary roots, it will return an explanation for this.
+     *
+     * @return String with roots, given the values of a, b, and c. If there are any imaginary roots, it will
+     * return an explanation for this. Also, if a is 0, it will return an explanation that the equation the parameters
+     * are describing is not quadratic.
      */
     public static String quadSolver(double a,double b,double c)
     {
         if(a == 0)
         {
-            return("No roots because a is 0.");
+            return("Not a quadratic equation because a is 0.");
         }
         else
         {
@@ -184,12 +198,70 @@ public class MShahiduzzamanLib
 
             if(rad == 0)
             {
-                return("The only root is " + (top1/bot));
+                return("The only root is " + (top1/bot) + ".");
             }
             else
             {
-                return ("The roots are " + (top1 / bot) + " and " + (top2 / bot));
+                return ("The roots are " + (top1 / bot) + " and " + (top2 / bot) + ".");
             }
         }
+    }
+
+    /**
+     * Determines the least common multiple between 3 numbers
+     *
+     * @param num1 first number
+     * @param num2 second number
+     * @param num3 third number
+     *
+     * @return an integer representing the least common multiple of the parameters
+     */
+    public static int leastCommonMultiple(int num1, int num2, int num3)
+    {
+        if(num1 == 0 || num2 == 0 || num3 == 0)
+        {
+            return(0);
+        }
+        if(num1<0)
+        {
+            num1 = num1 * -1;
+        }
+        if(num2<0)
+        {
+            num2 = num2 * -1;
+        }
+        if(num3<0)
+        {
+            num3 = num3 * -1;
+        }
+        int check1 = 0; //0 to continue while loop, 1 to get out
+        int mult1 = 1; //multiplies num1 by mult1 until answer mod num 2 is 0
+        int temp1 = 0; //answer to mult1 *check1
+
+        int check2 = 0;
+        int mult2 = 1;
+        int temp2 = 0;
+
+        while (check1 == 0)
+        {
+            temp1 = num1 * mult1;
+            if(temp1%num2 == 0)
+            {
+                check1 =1;
+            }
+            mult1++;
+        }
+
+        while (check2 == 0)
+        {
+            temp2 = temp1 * mult2;
+            if(temp2%num3 == 0)
+            {
+                check2 =1;
+            }
+            mult2++;
+        }
+
+        return(temp2);
     }
 }
